@@ -97,6 +97,8 @@ header{
 .head-content h1{
     margin-top: 40px;
     font-size: 2.5em;
+    background-color: #f9f9f9;
+    border-radius: 20px;
 }
 
 .head-content strong{
@@ -111,55 +113,85 @@ header{
 
 
 .woman{
+    object-fit: contain;
     position: absolute;
-    top: -99px;
-    left: -60px;
-    margin-left: 170px;
+    top: -50px;
+    /* left: -150px; */
+    /* margin-left: 170px; */
     z-index: 5;
-    padding-right: 80px;
+    /* padding-right: 80px; */
     margin-bottom: 200px;
 }
 
 .img-tin{
     position: relative;
     overflow: hidden;
+    height: 90vh;
 }
 
 .head-content input{
     width: 50%;
-    padding: 10px;
+    padding: 20px 10px;
     border: none;
     border-radius: 5px;
     box-shadow:0px 0px 10px rgba(0,0,0,0.5)inset;
     margin-top: 20px;
+    font-size: 1.05em;
 }
 
 .head-content button{
-    padding: 10px 20px;
+    padding: 20px 20px;
     background-color: var(--dblue--);
     border-radius: 5px;
     border: none;
     color: white;
 }
 
+
 /*    THIS IS THE STYLE FOR THE ABOUT CONTAINER    */
 
 .about-us{
     background-color: #f9f9f9;
+    padding-bottom: 50px;
 }
 
 .about-container{
     display: flex;
     padding: 100px;
+    justify-content: center;
 }
 
 .about-card{
-    margin:  auto;
+    margin: 0px 50px;
     padding: 20px;
     border-radius: 20px;
     width: 20%;
     background-color: white;
+    transition: 0.5s ease-in-out;
+    animation-name: bounce;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
 }
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+.about-card:hover{
+    /* transform: translatey(20px); */
+    box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+    /* bounce:0.5s; */
+}
+
+
 
 .about-card-content{
     margin-top: 20px;
@@ -167,8 +199,11 @@ header{
 
 .about-card-content strong, small{
     color: var(--dblue--);
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
+
+
+/*   THIS IS THE STYLE FOR THE DROPDOWN MENUS    */
 
 .hdn{
     width: 45%;
@@ -181,20 +216,18 @@ header{
     color: var(--dblue--);
 }
 
-/*   THIS IS THE STYLE FOR THE DROPDOWN MENUS    */
-
 .dropdown-menu{
     justify-content: center;
     display: flex;
-    margin: 20px ;
+    margin: 50px ;
 }
 
 .down {
-    margin-left: 15px;
+    margin: 0px 20px;
 }
 
 .down select{
-    padding: 10px 20px;
+    padding: 10px 40px;
     border-radius: 10px;
     border: none;
     color: var(--dblue--);
@@ -202,7 +235,7 @@ header{
 }
 
 .menu-btn button{
-    padding: 10px;
+    padding: 10px 20px;
     margin-left: 10px;
     border: none;
     background-color: var(--dblue--);
@@ -211,7 +244,404 @@ header{
 }
 
 
-@media screen and (max-width:900px) {
+/*     THIS IS THE STYLE FOR THE COURSE CARD  */
+
+.slide-course-container{
+    display: flex;
+    justify-content: center;
+}
+
+.course-slide{
+    /* border: solid; */
+    width: 10%;
+    margin: 10px;
+    padding: 10px 10px 20px ;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: space-between;
+    transition: 0.9s ease-in-out;
+    cursor: pointer;
+        box-shadow: 4px 4px 4px #20ae2780;           
+
+}
+
+.course-slide:hover{
+    width: 29%;
+    box-shadow:4px 4px 4px var(--dblue--);
+
+}
+
+.course-slide hr{
+    margin: 10px 0px ;
+}
+
+.course-slide-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    align-items: center;
+    color: var(--dblue--);
+}
+
+.course-slide-content span{
+    font-size:1em;
+    font-weight: bold;
+}
+
+.course-slide-content strong{
+    padding-left:190px;
+}
+/*    THIS IS THE STYLE FOR THE LEARNERS SLIDER    */
+
+
+.learners{
+    padding: 100px;
+}
+
+.learners h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.learners h1 span{
+    color: var(--dgreen--);
+}
+
+.learners-container{
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-auto-columns:25% ; */
+    overflow-x: auto;
+    /* overscroll-behavior-inline:contain ; */
+    padding: 0px 50px;
+    margin: 50px auto;
+    /* scroll-snap-type:  mandatory; */
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+
+}
+
+.learners-container:hover{
+
+}
+
+.learn-card{
+    display: grid;
+    width: 500px;
+    padding: 50px 0px;
+    margin: 20px;
+    background-color: #f9f9f9;
+    line-height: 20px;
+    transition: 0.5s ease-in-out;
+}
+
+.learn-card:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 100, 0.9);
+    border-radius: 10px;
+
+}
+
+
+
+/*     THIS IS THE STYLE FOR THE BLOG    */
+
+.blgy{
+    background-color: #f9f9f9;
+}
+
+.blg{
+    width: 20%;
+    margin: auto;
+}
+
+.blg h1{
+    margin-left: 50px;
+    font-size: 3rem;
+    color: var(--dblue--);
+}
+
+.blog{
+    display: flex;
+    justify-content: center;
+    color: black;
+    width: 90%;
+    margin: auto;
+}
+
+.blog-card{
+    width: 30%;
+    margin: 20px;
+    padding: 10px;
+    /* border: solid; */
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    transition: 0.5s ease-in-out;
+}
+
+.blog-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card-content h2{
+    margin: 15px 0px;
+    text-transform: uppercase;
+}
+
+.blog-card-content small{
+    font-size: 15px;    
+    color: black;
+}
+
+.blog-card-content small::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    margin: 20px 0px;
+    background-color: var(--dblue--);
+}
+
+.blog-card-content p{
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+
+/*    THIS IS THE STYLE FOR THE UPCOMMING TRAINING    */
+
+
+.upcoming-training{
+    padding: 100px;
+}
+
+.upcoming-training h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.upcoming-training h1 span{
+    color: var(--dgreen--);
+}
+
+.training-container{
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-auto-columns:25% ; */
+    overflow-x: auto;
+    /* overscroll-behavior-inline:contain ; */
+    padding: 20px 50px;
+    margin-top: 50px;
+    /* scroll-snap-type:  mandatory; */
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    transition: border-right 0.5s ease-in-out;
+    background-color: white;
+}
+
+.training-container:hover{
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+}
+
+.training-card{
+    text-align: center;
+    display: grid;
+    width: 500px;
+    padding: 20px 0px;
+    margin: 20px;
+    line-height: 20px;
+    transition: 0.5s ease-in-out;
+    color: var(--dblue--);
+    box-shadow: 0px 0px 10px rgba(0, 0, 100, 0.9);
+
+}
+
+.training-card:hover{
+    border-radius: 10px;
+
+}
+
+
+
+/*    THIS IS THE STYLE FOR THE LIBRARY    */
+
+.library{
+    background-color: var(--dblue--);
+    color: white;
+}
+
+.library h1{
+    text-align: center;
+    font-size: 4em;
+    margin-top: 50px;
+}
+
+.library-container{
+    display: flex;
+    padding: 100px;
+    justify-content: center;
+}
+
+.library-card{
+    margin: 0px 50px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 20%;
+    background-color: #4f87b5;
+    transition: 0.5s ease-in-out;
+    animation-name: bounce;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+.library-card:hover{
+    box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.library-card-content p{
+    /* margin-top: 20px; */
+    color: white;
+}
+
+/*    THIS IS THE STYLE FOR THE NEWSLETTER   */
+
+.newsletter{
+    background: 
+    linear-gradient(135deg, #bbd0e1 10%, transparent 10%, transparent 20%) 0 0 / 10px 10px repeat,
+    linear-gradient(225deg, #bbd0e1 10%, transparent 10%, transparent 20%) 0 0 / 10px 10px repeat;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.newsletter-container h1{
+    font-size: 3em;
+    color: var(--dblue--);
+}
+
+.newsletter-content{
+    padding: 20px;
+}
+
+.newsletter-content input{
+    width: 80%;
+    padding: 10px 20px;
+    /* border: none; */
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.newsletter-content button{
+    padding: 15px 15px;
+    border: none;
+    color: white;
+    background-color: var(--dblue--);
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+
+/*    THIS IS THE STYLE FOR THE WORKSHOP    */
+
+
+.workshop{
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.workshop h1{
+    text-align: center;
+    font-size: 3em;
+}
+
+.workshop span, .workshop p{
+    color: var(--dblue--);
+    text-align: center;
+}
+
+
+.workshop-container{
+    width: 80%; 
+    margin: 50px auto;
+}
+
+.workshop-item{
+    display: flex;    
+    justify-content: space-between;
+}
+
+.workshop-item select{
+    padding: 20px 50px 20px 0px;
+    border-radius: 10px;
+    color: var(--dblue--);
+    margin: 10px;
+    width: 450px;
+    font-size: 1em;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.5);
+}
+.see-more{
+    display: none;
+}
+
+
+/*    THIS IS THE STYLE FOR THE FOOTER    */
+
+footer{
+    background-color: var(--dblue--);
+    padding: 50px;
+    color: white;
+}
+
+footer p{
+    line-height: 30px;
+}
+
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.socials img{
+    margin: 5px;
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 5s ;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.extra-container{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+@media screen and (max-width:1000px) {
 
     .menu{
         display: none;
@@ -235,6 +665,225 @@ header{
      ul li a::after{
         display: none;
      }
+
+     /*    HEADER    */
+
+     .head-content{
+        display: flex;
+        flex-direction: column;
+     }
+     .info{
+        margin: auto;
+        text-align: center;
+        font-size: 10px;
+        width: 100%;
+     }
+
+     /*    ABOUT CARD   */
+
+     .about-container{
+        display: flex;
+        flex-direction: column;
+     }
+     .about-card{
+        text-align: center;
+        width: 80%;
+        margin: 10px auto;
+     }
+
+     /*    COURSES DROP-DOWN    */
+
+     .hdn{
+        width: 90%;
+     }
+     .hdn img{
+        width: 10%;
+     }
+     .hdn h1{
+        font-size: 30px;
+     }
+     .dropdown-menu{
+        display: flex;
+        flex-direction: column;
+        /* border: solid; */
+        padding: 0px 20px;
+
+     }
+     .down{
+        /* border: solid; */
+        margin: auto;
+        padding-right: 20px;
+        width: 100%;
+     }
+     .down select{
+        width: 400px;
+        margin: 10px;
+        width: 100%;
+     }
+     .menu-btn button{
+        width: 98%;
+     }
+
+     /*    COURSE CARD   */
+
+     .slide-course-container{
+        display: grid;
+        grid-auto-flow: column;
+        padding: 50px 100px;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+        overflow-x: auto;
+     }
+     .course-slide{
+        gap: 20px;
+        width: 350px;
+        display: inline-block;
+     }
+     .course-slide:hover{
+        display: none;
+        /* width: 100%; */
+     }
+
+     /*   learners    */
+
+     .learners{
+        /* border: solid; */
+     }
+
+     .learners h1{
+        width: 500px;
+        margin: 80px auto;
+        font-size: 19px;
+     }
+     .learners-container{
+        /* border: solid; */
+        /* padding: 20px 50px; */
+        display: grid;
+        /* height: 200px; */
+        width: 110%;
+        /* margin: auto; */
+     }
+     .learn-card{
+        font-size: 20px;
+        width: 500px;
+     }
+     .learners-content{
+        /* border: solid; */
+        /* margin: 20px;    */
+     }
+     .blg {
+        display: flex;
+        /* flex-direction: column; */
+        font-size: 50px;
+        width: 100%;
+        justify-content: center;
+     }
+     .blog{
+        display: grid;
+        grid-auto-flow: column;
+        overflow-x: auto;
+        /* padding: 200px 0px; */
+        scroll-snap-type: mandatory;
+        scroll-behavior: auto;
+
+
+     }
+     .blog-card{
+        display: grid;
+        width: 350px;
+    }
+    .blog-card-content{
+        font-size: 10px;
+    }
+    .upcoming-training{
+        margin: auto;
+    }
+    .blog-card-content small::after{
+        position: relative;
+    }
+    
+    /*    UPCOMING TRAINING   */
+
+    .upcoming-training h1{
+        font-size: 20px;
+    }
+    .training-container{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .training-card{
+        width: 100%;
+    }
+
+    /*    LIBRARY    */
+
+    .library h1{
+        font-size: 50px;
+    }
+    .library-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .library-card{
+        text-align: center;
+        width: 50%;
+        margin: 50px auto;
+    }
+
+    /*    NEWSLETTER    */
+
+    .newsletter-container h1{
+        font-size: 40px;
+        text-align: center;
+    }
+    .newsletter-content{
+        display: flex;
+        margin: 20px;
+        padding: 0px 20px;
+        width: 100%;
+    }
+    .newsletter-content input{
+        width: 100%;
+    }
+    .newsletter-content label{
+        width: 50%;
+    }
+    
+    /*   WORKSHOP   */
+
+    .workshop h1{
+        font-size: 20px;
+    }
+    .workshop-container{
+        display: flex;
+        flex-direction: column;
+        width: 65%;
+        justify-content: center;
+    }
+    .workshop-item{
+        display: flex;
+        flex-direction: column;        
+    }
+    .workshop-item:nth-child(2){
+        display: none;
+    }
+    .see-more{
+        text-align: center;
+        margin-top: 20px;
+        color: var(--dblue--);
+        cursor: pointer;
+    }
+
+    /*    FOOTER    */
+
+        .footer-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .fts{
+            margin: 10px;
+        }
 }
  
 
