@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    overflow-x: hidden;
+
+}
+
+:root{
+    --dblue--:#18629f;
+    --dgreen--:#20ae26;
+}
+
+  /*     THIS IS THE STYLE FOR THE NAV BAR     */
+.logo{
+    margin-left: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    margin:20px auto;
+    width: 90%;
+}
+
+nav ul{
+    justify-content: center;
+    padding: 20px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline;
+    margin: 10px ;
+    justify-content: center;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+   
+}
+
+.togglebar{
+    justify-content: center;
+    padding: 20px;
+    display: none;
+}
+
+.bar{
+    background-color: #6e9dc3;
+    padding: 1px 15px;
+    margin: 5px;
+}
+
+ul li a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 5px;
+    margin: 5px;
+    transition: width 0.5s ;
+    background-color: var(--dblue--);
+}
+
+/*    THIS IS THE STYLE FOR THE HEADER TITLE    */
+
+header{
+    margin-top: 50px;
+    margin: auto;
+}
+
+.container-of-all{
+    display: flex;
+}
+
+.head-content{
+    display: flex;
+    margin: auto;
+}
+
+
+.info{
+    width: 49%;
+    height: 500px;
+}
+
+.info p{
+    width: 95%;
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.head-content h1{
+    margin-top: 40px;
+    font-size: 2.5em;
+}
+
+.head-content strong{
+    color: var(--dgreen--);
+}
+
+.head-content img{
+    margin-top: 20px;
+}
+
+  /*  STYLE FOR THE BIG IMAGE     */
+
+
+.woman{
+    position: absolute;
+    top: -99px;
+    left: -60px;
+    margin-left: 170px;
+    z-index: 5;
+    padding-right: 80px;
+    margin-bottom: 200px;
+}
+
+.img-tin{
+    position: relative;
+    overflow: hidden;
+}
+
+.head-content input{
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.5)inset;
+    margin-top: 20px;
+}
+
+.head-content button{
+    padding: 10px 20px;
+    background-color: var(--dblue--);
+    border-radius: 5px;
+    border: none;
+    color: white;
+}
+
+/*    THIS IS THE STYLE FOR THE ABOUT CONTAINER    */
+
+.about-us{
+    background-color: #f9f9f9;
+}
+
+.about-container{
+    display: flex;
+    padding: 100px;
+}
+
+.about-card{
+    margin:  auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 20%;
+    background-color: white;
+}
+
+.about-card-content{
+    margin-top: 20px;
+}
+
+.about-card-content strong, small{
+    color: var(--dblue--);
+    font-size: 1.2em;
+}
+
+.hdn{
+    width: 45%;
+    margin: auto;
+}
+
+.hdn h1{
+    margin-left: 50px;
+    font-size: 3rem;
+    color: var(--dblue--);
+}
+
+/*   THIS IS THE STYLE FOR THE DROPDOWN MENUS    */
+
+.dropdown-menu{
+    justify-content: center;
+    display: flex;
+    margin: 20px ;
+}
+
+.down {
+    margin-left: 15px;
+}
+
+.down select{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    color: var(--dblue--);
+    font-size: 1em;
+}
+
+.menu-btn button{
+    padding: 10px;
+    margin-left: 10px;
+    border: none;
+    background-color: var(--dblue--);
+    color: white;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .menu{
+        display: none;
+    }
+    .togglebar{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    /*   MEDIA QUERY FOR THE HAMBURGER    */
+
+    .active{
+        display:  flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        background-color: #f9f9f9;
+        max-width: 100%;
+     }
+     ul li a::after{
+        display: none;
+     }
+}
+ 
+
+
+
+
+
+
+
