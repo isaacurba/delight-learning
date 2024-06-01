@@ -25,7 +25,7 @@ nav{
 }
 
 nav ul{
-    justify-content: center;
+    /* justify-content: center; */
     padding: 20px;
 }
 
@@ -33,7 +33,7 @@ nav ul li{
     list-style-type: none;
     display: inline;
     margin: 10px ;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 ul li a{
@@ -567,13 +567,12 @@ header{
 
 
 .workshop-container{
-    width: 80%; 
-    margin: 50px auto;
+ 
 }
 
 .workshop-item{
     display: flex;    
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .workshop-item select{
@@ -687,8 +686,8 @@ footer p{
      }
      .about-card{
         text-align: center;
-        width: 80%;
-        margin: 10px auto;
+        width: 50%;
+        margin: 50px auto;
      }
 
      /*    COURSES DROP-DOWN    */
@@ -807,13 +806,15 @@ footer p{
     .upcoming-training h1{
         font-size: 20px;
     }
-    .training-container{
-        display: flex;
-        flex-direction: column;
-        overflow: hidden;
+     .training-container{
+        /* display: grid; */
+        width: 100%;
+        max-width:  900px;
+        border: solid;
+        padding: 0px 20px;
     }
     .training-card{
-        width: 100%;
+        width: 300px;
     }
 
     /*    LIBRARY    */
@@ -858,13 +859,12 @@ footer p{
     .workshop-container{
         display: flex;
         flex-direction: column;
-        width: 65%;
-        justify-content: center;
+        /* justify-content: center; */
     }
     .workshop-item{
         display: flex;
         flex-direction: column;        
-    }
+     }
     .workshop-item:nth-child(2){
         display: none;
     }
